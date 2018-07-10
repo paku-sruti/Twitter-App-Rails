@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterAppRails</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <%= form_for :search_form, url: "welcome/search" do |form| %>
+        <%= form.text_field :query %>
+        <%= form.submit :Search %>
+      <% end  %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

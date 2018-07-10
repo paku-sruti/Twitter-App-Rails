@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title= t('layouts.title')
+    = stylesheet_link_tag    "application", media: "all"
+    = csrf_meta_tags
+    = javascript_include_tag "application"
+    = render 'layouts/shim'
+  %body
+    = render 'layouts/header'
+    .container
+      = yield
